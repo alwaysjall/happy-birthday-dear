@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'Dancing Script', cursive;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #f50b02;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  margin: 40px auto;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  color: white;
+  font-size: 22px;
+  line-height: 1.6;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 5;
+}
+.glitch {
+font-size: 24px;
+font-weight: bold;
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+color: white;
+animation: glitch 1s infinite;
+z-index: 11;
+}
+
+@keyframes glitch {
+0% { text-shadow: 2px 2px red, -2px -2px white; }
+25% { text-shadow: -2px -2px red, 2px 2px white; }
+50% { text-shadow: 2px -2px red, -2px 2px white; }
+75% { text-shadow: -2px 2px red, 2px -2px white; }
+100% { text-shadow: 2px 2px red, -2px -2px white; }
+}
